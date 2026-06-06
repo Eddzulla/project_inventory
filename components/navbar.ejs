@@ -1,19 +1,27 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/styles.css">
- </head>
- <body>
-    
+
    <header class="page_header"> 
-        <a class="home_btn" href="/"><h1>HOME</h1></a>   
-        <h1>Welcome to the fighting shop</h1> 
+        <a class="home_btn" href="/"><h1>HOME</h1></a> 
+        <div class="header_text">  
+            <h1>Welcome to the fighting shop</h1> 
+            <p>We have items for the top 3 fighting sports</p>
+        </div>
+        
+        <div class="admin_btns">
+            <a class="admin_toggle" href="/toggleAdmin">
+               <% if(isAdmin){ %> ADMIN: <br> on <% } else { %> ADMIN:<br> off <% } %>
+            </a>
+            <div class="crud_btn_container">
+            <a class="crud_btn" href="/createItem">
+                Create item 
+            </a>
+             </div>
+        </div>
+       
+  
         <span></span>
     </header>
-    <p>We have items for the top 3 fighting sports</p>
+
+    
    
     <ul>
         <% categories.forEach(category => {%>
@@ -28,7 +36,3 @@
     </ul>
 
     <div class="navbar-separator"></div>
-
- </body>
- </html>
- 

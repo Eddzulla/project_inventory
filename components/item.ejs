@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
-    <title><%= item.name %></title>
-</head>
-<body>
-    <div class="item">
-            <h2><%= item.name %></h2>
-            <p><%= item.description %></p>
-            <h3><%= item.price %> SEK</h3>
-            <p><%= item.stock %> pcs</p>
-    </div>
+<div class="item">
+        <h2><%= item.name %></h2>
+        <p><%= item.description %></p>
+        <h3><%= item.price %> SEK</h3>
+        <p><%= item.stock %> pcs</p>
+        <p> <%= item.brand_name %> </p> 
+        <p> <%= item.country %> </p>
+        <form action="/deleteItem/<%= item.id %>" method="POST">
+                <p> <% if(isAdmin) { %>
+                        <button type="submit">X</button> 
+                <%}  else{ } %>
+                </p>
+        </form>
+</div>
     
-</body>
-</html>

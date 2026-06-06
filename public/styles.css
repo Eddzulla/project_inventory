@@ -25,6 +25,26 @@ li {
     padding: 20px;
 }
 
+.category:hover{
+    border: solid 2px red;
+}
+
+.crud_btn{
+    width: 100%;
+    padding: 3px;
+    font-weight: 800;
+}
+
+.crud_btn_container{
+    width: 100px;
+    border: solid 2px black;
+}
+
+.crud_btn_container:hover{
+    color: red;
+    border: solid 2px red;
+}
+
 body{
     text-align: center;
 }
@@ -38,13 +58,20 @@ li a{
 li div:hover{
     font-weight: 1000;
     color: red;
+
 }
 
 .navbar-separator{
     width: 95%;
     height: 2px;
     background-color: black;
-    margin: 10px 20px 20px 10px;
+    margin: 10px 20px 10px 20px;
+}
+.admin_btns{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
 }
 
 .home_btn{
@@ -65,8 +92,9 @@ li div:hover{
 .page_header {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  align-items: center;
+  align-items: baseline;
   padding: 0 20px;
+
 }
 
 .item{
@@ -80,4 +108,22 @@ li div:hover{
     grid-template-columns: repeat(3, 0.8fr);
     gap: 20px;
     justify-content: center;
+}
+
+input, textarea{
+    border: solid 2px black;
+
+}
+.header_text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.create_item_form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
 }
